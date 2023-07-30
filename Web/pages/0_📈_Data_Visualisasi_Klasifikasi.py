@@ -271,7 +271,7 @@ if visualisasi == "Metode Extreme Learning Machine":
     import streamlit as st
     import pandas as pd
     
-    st.title("Visualisasi Data ISPU Hasil Forecasting Dengan Metode Kernel Extreme Learning Machine")
+    st.title("Visualisasi Data ISPU Hasil Forecasting Dengan Metode Extreme Learning Machine")
 
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["DKI1 Bunderan HI","DKI2 Kelapa Gading", "DKI3 Jagakarsa", "DKI4 Lubang Buaya", "DKI5 Kebon Jeruk", "Data Uji Website"])
     with tab1:
