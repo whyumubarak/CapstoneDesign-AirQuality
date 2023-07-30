@@ -3,6 +3,6 @@ openpyxl==3.0.10
 folium
 streamlit_folium
 geopy==2.3.0
-DateTime
-plotly
+joblib
+pandas
 scikit-learn==1.3.0
