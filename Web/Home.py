@@ -69,23 +69,23 @@ with colu2:
    with colo1:
       from PIL import Image
       #
-      image = Image.open('D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/images/b.png')
+      image = Image.open('Web/images/b.png')
       resized_image = image.resize((35, 35))
       st.image(resized_image)
       #
-      image = Image.open('D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/images/m.png')
+      image = Image.open('Web/images/m.png')
       resized_image = image.resize((35, 35))
       st.image(resized_image)
       #
-      image = Image.open('D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/images/u.png')
+      image = Image.open('Web/images/u.png')
       resized_image = image.resize((35, 35))
       st.image(resized_image)
       #
-      image = Image.open('D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/images/h.png')
+      image = Image.open('Web/images/h.png')
       resized_image = image.resize((35, 35))
       st.image(resized_image)
       #
-      image = Image.open('D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/images/o.png')
+      image = Image.open('Web/images/o.png')
       resized_image = image.resize((35, 35))
       st.image(resized_image)
    with colo2:
@@ -115,7 +115,7 @@ st.markdown(
 )
 
 # tabel_kategori_ispu = Image.open('images/Tabel_kategori_indeks_ISPU.png')
-tabel_kategori_ispu = Image.open(Path(__file__).parents[1] / 'D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/images/Tabel_kategori_indeks_ISPU.png')
+tabel_kategori_ispu = Image.open(Path(__file__).parents[1] / 'Web/images/Tabel_kategori_indeks_ISPU.png')
 
 col1, col2, col3 = st.columns([1,6,1])
 
@@ -139,7 +139,7 @@ st.markdown(
 )
 
 # konversi_nilai_konsentrasi = Image.open('./images/Konversi_nilai_konsentrasi.png')
-konversi_nilai_konsentrasi = Image.open(Path(__file__).parents[1] / 'D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/images/Konversi_nilai_konsentrasi.png')
+konversi_nilai_konsentrasi = Image.open(Path(__file__).parents[1] / 'Web/images/Konversi_nilai_konsentrasi.png')
 
 col1, col2, col3 = st.columns([1,6,1])
 
@@ -162,7 +162,7 @@ st.markdown(
 )
 
 # rumus_ISPU = Image.open('./images/rumus_ISPU.png')
-rumus_ISPU = Image.open(Path(__file__).parents[1] / 'D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/images/rumus_ISPU.png')
+rumus_ISPU = Image.open(Path(__file__).parents[1] / 'Web/images/rumus_ISPU.png')
 
 col1, col2, col3 = st.columns([1,1,1])
 
