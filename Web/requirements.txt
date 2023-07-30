@@ -1,2 +1,7 @@
 plotly_express==0.4.0
 openpyxl==3.0.10
+folium
+streamlit_folium
+geopy==2.3.0
+DateTime
+plotly

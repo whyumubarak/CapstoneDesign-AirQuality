@@ -19,7 +19,7 @@ if visualisasi == "Dataset ISPU":
     st.title("Visualisasi Dataset ISPU")
     # Load the Excel file
     def load_excel():
-        file_path = "D:/Data/Kuliah/TA/Projek-TA/DATA/Imputer/DATA ISPU - Impute.xlsx"
+        file_path = "D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Imputer/DATA ISPU - Impute.xlsx"
         xls = pd.ExcelFile(file_path)
         sheets = xls.sheet_names
         data = {}
@@ -186,30 +186,40 @@ if visualisasi == "Dataset ISPU":
                     'title': 'Baik',
                     'subtitle': 'Tingkat kualitas udara yang sangat baik, tidak memberikan efek  negatif terhadap manusia, hewan, tumbuhan.',
                     'action': 'Sangat baik melakukan kegiatan diluar.',
+                    'action2': '',
+                    'action3': '',
                     'color': 'green'
                 },
                 {
                     'title': 'Sedang',
                     'subtitle': 'Tingkat kualitas udara masih dapat diterima pada kesehatan manusia, hewan dan tumbuhan.',
-                    'action': 'Kelompok sensitif: Kurangi aktivitas fisik yang terlalu lama atau berat.Setiap orang: Masih dapat beraktivitas di luar.',
+                    'action': 'Kelompok Sensitif: Kurangi aktivitas fisik yang terlalu lama atau berat.',
+                    'action2': 'Setiap Orang: Masih dapat beraktivitas di luar.',
+                    'action3': '',
                     'color': 'blue'
                 },
                 {
                     'title': 'Tidak Sehat',
                     'subtitle': 'Tingkat kualitas udara yang bersifat merugikan paga manusia, hewan, dan tumbuhan.',
-                    'action': '',
+                    'action': 'Kelompok Sensitif : Boleh melakukan aktivitas di luar, tetapi mengambil rehat lebih sering dan melakukan aktivitas ringan. Amati gejala berupa batuk atau nafas sesak.',
+                    'action2': 'Penderita Asma : harus mengikuti petunjuk kesehatan untuk asma dan menyimpan obat asma.',
+                    'action3': 'Setiap Orang : Mengurangi aktivitas fisik yang terlalu lama di luar ruangan.',
                     'color': 'orange'
                 },
                 {
                     'title': 'Sangat Tidak Sehat',
                     'subtitle': 'Tingkat kualitas udara yang dapat meningkatkan risiko kesehatan pada sejumlah segmen populasi yang terpapar.',
-                    'action': 'aaaaaaaaaa',
+                    'action': 'Kelompok Sensitif : Hindari semua aktivitas di luar. Perbanyak aktivitas di dalam ruangan atau lakukan penjadwalan ulang pada waktu dengan kualitas udara yang baik.',
+                    'action2': 'Setiap Orang : Hindari aktivitas fisik yang terlalu lama di luar ruangan, pertimbangkan untuk melakukan aktivitas di dalam ruangan.',
+                    'action3': '',
                     'color': 'red'
                 },
                 {
                     'title': 'Berbahaya',
                     'subtitle': 'Tingkat kualitas udara yang dapat merugikan kesehatan serius pada populasi dan perlu penanganan cepat.',
-                    'action': 'aaaaaaaaa',
+                    'action': 'Kelompok Sensitif : Tetap di dalam ruangan dan hanya melakukan sedikit aktivitas',
+                    'action2': 'Setiap Orang : Hindari semua aktivitas di luar',
+                    'action3': '',
                     'color': 'black'
                 }
             ]
@@ -221,129 +231,225 @@ if visualisasi == "Dataset ISPU":
                     st.write(f'<h2 style="font-size: 12px; color:black; text-align:center; background-color:white;">{data[i]["subtitle"]}</h2>', unsafe_allow_html=True)
                     st.write('<h2 style="font-size: 16px; font-weight:bold; color:black; text-align:center; background-color:white;">Apa yang harus dilakukan:</h2>', unsafe_allow_html=True)
                     st.write(f'<h2 style="font-size: 12px; color:black; text-align:center; background-color:white;">{data[i]["action"]}</h2>', unsafe_allow_html=True)
+                    st.write(f'<h2 style="font-size: 12px; color:black; text-align:center; background-color:white;">{data[i]["action2"]}</h2>', unsafe_allow_html=True)
+                    st.write(f'<h2 style="font-size: 12px; color:black; text-align:center; background-color:white;">{data[i]["action3"]}</h2>', unsafe_allow_html=True)
 
         with tab2:
             st.subheader("DKI1 Bunderan HI")
-            Dki1 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI1")
+            Dki1 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI1")
             st.write(Dki1)
 
         with tab3:
             st.subheader("DKI2 Kelapa Gading")
-            Dki2 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI2")
+            Dki2 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI2")
             st.write(Dki2)
+
         with tab4:
             st.subheader("DKI3 Jagakarsa")
-            Dki3 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI3")
+            Dki3 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI3")
             st.write(Dki3)
-
+            
         with tab5:
             st.subheader("DKI4 Lubang Buaya")
-            Dki4 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI4")
+            Dki4 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI4")
             st.write(Dki4)
 
         with tab6:
             st.subheader("DKI5 Kebon Jeruk")
-            Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI5")
+            Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI5")
             st.write(Dki5)
 
     # Run the app
     if __name__ == "__main__":
         main()
 
+
 #-------------------------------------------------------------Visualisasi Forecasting Metode Extreme Learning Machine-------------------------------------------------------------------------
 
 if visualisasi == "Metode Extreme Learning Machine":
+
     import streamlit as st
     import pandas as pd
     
-    st.title("Visualisasi Data ISPU Hasil Forecasting Dengan Metode Extreme Learning Machine")
+    st.title("Visualisasi Data ISPU Hasil Forecasting Dengan Metode Kernel Extreme Learning Machine")
 
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["DKI1 Bunderan HI","DKI2 Kelapa Gading", "DKI3 Jagakarsa", "DKI4 Lubang Buaya", "DKI5 Kebon Jeruk"])
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["DKI1 Bunderan HI","DKI2 Kelapa Gading", "DKI3 Jagakarsa", "DKI4 Lubang Buaya", "DKI5 Kebon Jeruk", "Data Uji Website"])
     with tab1:
         st.subheader("DKI1 Bunderan HI")
-        Dki1 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI1")
+        Dki1 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI1")
         st.write(Dki1)
     with tab2:
         st.subheader("DKI2 Kelapa Gading")
-        Dki2 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI2")
+        Dki2 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI2")
         st.write(Dki2)
     with tab3:
         st.subheader("DKI3 Jagakarsa")
-        Dki3 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI3")
+        Dki3 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI3")
         st.write(Dki3)
-
     with tab4:
         st.subheader("DKI4 Lubang Buaya")
-        Dki4 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI4")
+        Dki4 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI4")
         st.write(Dki4)
-
     with tab5:
         st.subheader("DKI5 Kebon Jeruk")
-        Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI5")
+        Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI5")
+        st.write(Dki5)
+    with tab6:
+        st.subheader("Data Uji Website")
+        Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Preprocessing/test.xlsx")
         st.write(Dki5)
 
     import numpy as np
-    import joblib
+    from numpy.linalg import pinv, inv
+    import time
+    from sklearn.metrics import classification_report, confusion_matrix
+    from sklearn.metrics import ConfusionMatrixDisplay
 
-    def leaky_relu(x, alpha=0.01):
-        return np.where(x >= 0, x, alpha * x)
+    class elm():
+        def __init__(self, hidden_units, activation_function, x, y, C, elm_type, one_hot=True, random_type='normal'):
+            self.hidden_units = hidden_units
+            self.activation_function = activation_function
+            self.random_type = random_type
+            self.x = x
+            self.y = y
+            self.C = C
+            self.class_num = np.unique(self.y).shape[0]
+            self.beta = np.zeros((self.hidden_units, self.class_num))
+            self.elm_type = elm_type
+            self.one_hot = one_hot
 
-    def elm_fit(X, target, h, W=None, lambda_val=1):
-        if W is None:
-            W = np.random.uniform(-.6, .6, (h, len(X[0])))
-        Hinit = X @ W.T
-        H = leaky_relu(Hinit)
-        Ht = H.T
-        
-        # Menambahkan regularisasi ridge
-        I = np.identity(h)
-        Hp = np.linalg.inv(Ht @ H + lambda_val * I) @ Ht
-        
-        beta = Hp @ target
-        y = H @ beta
-        mape = sum(abs(y - target) / target) * 100 / len(target)
-        return W, beta, mape
+            if elm_type == 'clf' and self.one_hot:
+                self.one_hot_label = np.zeros((self.y.shape[0], self.class_num + 1))
+                for i in range(self.y.shape[0]):
+                    self.one_hot_label[i, int(self.y[i])] = 1
 
+            if self.random_type == 'uniform':
+                self.W = np.random.uniform(low=0, high=1, size=(self.hidden_units, self.x.shape[1]))
+                self.b = np.random.uniform(low=0, high=1, size=(self.hidden_units, 1))
+            if self.random_type == 'normal':
+                self.W = np.random.normal(loc=0, scale=0.5, size=(self.hidden_units, self.x.shape[1]))
+                self.b = np.random.normal(loc=0, scale=0.5, size=(self.hidden_units, 1))
 
-    def elm_predict(X, W, b, round_output=False):
-        Hinit = X @ W.T
-        H = leaky_relu(Hinit)
-        y = H @ b
+        def __input2hidden(self, x):
+            #x = np.array(x, dtype=np.float64)  # Mengubah tipe data x menjadi float64
+            self.temH = np.dot(self.W, x.T) + self.b
 
-        if round_output:
-            y = [int(round(x)) for x in y]
+            if self.activation_function == 'sigmoid':
+                self.H = 1 / (1 + np.exp(-self.temH))
 
-        return y
+            if self.activation_function == 'relu':
+                self.H = self.temH * (self.temH > 0)
 
-    def determine_air_quality(PM10, SO2, CO, O3, NO2):
-        model = joblib.load('model_leaky.sav')
-        W_test, b_test = model['W'], model['b']
+            if self.activation_function == 'sin':
+                self.H = np.sin(self.temH)
 
-        X_test = np.array([[PM10, SO2, CO, O3, NO2]])
+            if self.activation_function == 'tanh':
+                self.H = (np.exp(self.temH) - np.exp(-self.temH)) / (np.exp(self.temH) + np.exp(-self.temH))
 
-        air_quality = elm_predict(X_test, W_test, b_test, round_output=True)
+            if self.activation_function == 'leaky_relu':
+                self.H = np.maximum(0, self.temH) + 0.1 * np.minimum(0, self.temH)
 
-        return air_quality[0] 
-        '''
-        if air_quality[0] == 1:
-            return "BAIK"
-        elif air_quality[0] == 2:
-            return "SEDANG"
-        elif air_quality[0] == 3:
-            return "TIDAK SEHAT"
-        elif air_quality[0] == 4:
-            return "SANGAT TIDAK SEHAT"
-        elif air_quality[0] == 5:
-            return "BERBAHAYA"
-        else:
-            return "Tidak dapat menentukan kualitas udara"
-        '''
+            return self.H
+
+        def __hidden2output(self, H):
+            self.output = np.dot(H.T, self.beta)
+            return self.output
+
+        def fit(self, algorithm):
+            self.time1 = time.perf_counter()
+            self.H = self.__input2hidden(self.x)
+            if self.elm_type == 'clf':
+                if self.one_hot:
+                    self.y_temp = self.one_hot_label
+                else:
+                    self.y_temp = self.y
+            if self.elm_type == 'reg':
+                self.y_temp = self.y
+
+            if algorithm == 'no_re':
+                self.beta = np.dot(pinv(self.H.T), self.y_temp)
+
+            if algorithm == 'solution1':
+                self.tmp1 = inv(np.eye(self.H.shape[0]) / self.C + np.dot(self.H, self.H.T))
+                self.tmp2 = np.dot(self.tmp1, self.H)
+                self.beta = np.dot(self.tmp2, self.y_temp)
+
+            if algorithm == 'solution2':
+                self.tmp1 = inv(np.eye(self.H.shape[0]) / self.C + np.dot(self.H, self.H.T))
+                self.tmp2 = np.dot(self.H.T, self.tmp1)
+                self.beta = np.dot(self.tmp2.T, self.y_temp)
+            self.time2 = time.perf_counter()
+
+            self.result = self.__hidden2output(self.H)
+
+            if self.elm_type == 'clf':
+                self.result = np.exp(self.result) / np.sum(np.exp(self.result), axis=1).reshape(-1, 1)
+
+            if self.elm_type == 'clf':
+                self.y_ = np.where(self.result == np.max(self.result, axis=1).reshape(-1, 1))[1]
+                self.correct = 0
+                for i in range(self.y.shape[0]):
+                    if self.y_[i] == self.y[i]:
+                        self.correct += 1
+                self.train_score = self.correct / self.y.shape[0]
+            if self.elm_type == 'reg':
+                self.train_score = np.sqrt(np.sum((self.result - self.y) * (self.result - self.y)) / self.y.shape[0])
+            train_time = str(self.time2 - self.time1)
+            return self.beta, self.train_score, train_time
+
+        def predict(self, x):
+            #x = np.array(x, dtype=np.float64)  # Mengubah tipe data x menjadi float64
+            self.H = self.__input2hidden(x)
+            self.y_ = self.__hidden2output(self.H)
+            if self.elm_type == 'clf':
+                self.y_ = np.where(self.y_ == np.max(self.y_, axis=1).reshape(-1, 1))[1]
+
+            return self.y_
+
+        def predict_proba(self, x):
+            #x = np.array(x, dtype=np.float64)  # Mengubah tipe data x menjadi float64
+            self.H = self.__input2hidden(x)
+            self.y_ = self.__hidden2output(self.H)
+            if self.elm_type == 'clf':
+                self.proba = np.exp(self.y_) / np.sum(np.exp(self.y_), axis=1).reshape(-1, 1)
+            return self.proba
+
+        def score(self, x, y):
+            self.prediction = self.predict(x)
+            if self.elm_type == 'clf':
+                self.correct = 0
+                for i in range(y.shape[0]):
+                    if self.prediction[i] == y[i]:
+                        self.correct += 1
+                self.test_score = self.correct / y.shape[0]
+            if self.elm_type == 'reg':
+                self.test_score = np.sqrt(np.sum((self.result - self.y) * (self.result - self.y)) / self.y.shape[0])
+            return self.test_score
+
+    import pickle
+    import streamlit as st
+    import pandas as pd
+    import numpy as np
+    from sklearn.preprocessing import StandardScaler
+
+    # Load the ELM model from the .sav file
+    with open('ELM_M.sav', 'rb') as file:
+        model_data = pickle.load(file)
+
+    kelayakan_model = model_data
+
+    # Function to make predictions using the loaded model
+    def predict_air_quality(data):
+        # Perform the prediction using the Extreme Learning Machine model
+        air_prediction = kelayakan_model.predict(data)
+
+        return air_prediction
 
     def main():
         st.title("Penilaian Kualitas Udara")
         
         # Membaca file Excel
-        excel_file = "D:/Data/Kuliah/TA/Projek-TA/Web/files/ELM forecasting/FORECAST ELM.xlsx"
+        excel_file = "D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/ELM forecasting/FORECAST ELM.xlsx"
         xls = pd.ExcelFile(excel_file)
         
         # Mendapatkan daftar sheet dalam file Excel
@@ -376,23 +482,55 @@ if visualisasi == "Metode Extreme Learning Machine":
             # Mendapatkan nilai partikel berdasarkan tanggal yang dipilih
             selected_row = selected_data.iloc[0]  # Mengambil baris pertama
             
-            # Mengisi nilai PM10, SO2, CO, O3, NO2 secara otomatis
-            PM10 = st.number_input("Masukkan nilai PM10", value=int(selected_row["PM10"]))
-            SO2 = st.number_input("Masukkan nilai SO2", value=int(selected_row["SO2"]))
-            CO = st.number_input("Masukkan nilai CO", value=int(selected_row["CO"]))
-            O3 = st.number_input("Masukkan nilai O3", value=int(selected_row["O3"]))
-            NO2 = st.number_input("Masukkan nilai NO2", value=int(selected_row["NO2"]))
-            
-            if st.button("PROSES"):
-                air_quality = determine_air_quality(PM10, SO2, CO, O3, NO2)
-                st.write("Kualitas udara:", air_quality)
-        else:
-            st.write("Data tidak tersedia untuk tanggal yang dipilih")
+        # Mengisi nilai PM10, SO2, CO, O3, NO2 secara otomatis
+        PM10 = st.number_input("Masukkan nilai PM10", value=int(selected_row["PM10"]))
+        SO2 = st.number_input("Masukkan nilai SO2", value=int(selected_row["SO2"]))
+        CO = st.number_input("Masukkan nilai CO", value=int(selected_row["CO"]))
+        O3 = st.number_input("Masukkan nilai O3", value=int(selected_row["O3"]))
+        NO2 = st.number_input("Masukkan nilai NO2", value=int(selected_row["NO2"]))
+
+        if st.button("Proses"):
+            # Periksa apakah ada masukan yang kosong atau tidak valid
+            if any(pd.isnull([PM10, SO2, CO, O3, NO2])):
+                st.error("Harap masukkan nilai numerik yang valid untuk semua input.")
+            else:
+                # Konversi data masukan pengguna menjadi array numpy dan ubah bentuknya
+                input_data = np.array([PM10, SO2, CO, O3, NO2]).reshape(1, -1)
+
+                # Memuat data pelatihan dari file Excel
+                training_data = pd.read_excel('D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Preprocessing/Data setelah smote.xlsx')  
+
+                # Ekstrak fitur-fitur masukan dari data pelatihan dan sesuaikan Standar Scaler
+                X_train = training_data.drop('Kategori', axis=1)
+                scaler = StandardScaler()
+                X_train_scaled = scaler.fit_transform(X_train)
+
+                # Transformasikan data masukan pengguna menggunakan Standar Scaler yang telah di sesuaikan
+                input_data_scaled = scaler.transform(input_data)
+
+                # Lakukan prediksi menggunakan model Extreme Learning Machine
+                air_prediction = predict_air_quality(input_data_scaled)
+                
+                # Hubungkan prediksi numerik dengan label yang sesuai
+                if air_prediction == 1:
+                    air_quality_label = "BAIK"
+                elif air_prediction == 2:
+                    air_quality_label = "SEDANG"
+                elif air_prediction == 3:
+                    air_quality_label = "TIDAK SEHAT"
+                elif air_prediction == 4:
+                    air_quality_label = "SANGAT TIDAK SEHAT"
+                else:
+                    air_quality_label = "Prediksi tidak valid"
+
+                # Tampilkan hasil prediksi atau gunakan untuk proses lebih lanjut
+                st.write("Prediksi Kualitas Udara: ", air_quality_label)
+                st.write("Data Setelah Scaled:", input_data_scaled)
 
     # Menjalankan aplikasi Streamlit
     if __name__ == '__main__':
         main()
-#-------------------------------------------------------------Visualisasi Forecasting Metode Extreme Learning Machine-------------------------------------------------------------------------
+#-------------------------------------------------------------Visualisasi Forecasting Metode Kernel Extreme Learning Machine-------------------------------------------------------------------------
 
 if visualisasi == "Metode Kernel Extreme Learning Machine":
     import streamlit as st
@@ -400,92 +538,184 @@ if visualisasi == "Metode Kernel Extreme Learning Machine":
     
     st.title("Visualisasi Data ISPU Hasil Forecasting Dengan Metode Kernel Extreme Learning Machine")
 
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["DKI1 Bunderan HI","DKI2 Kelapa Gading", "DKI3 Jagakarsa", "DKI4 Lubang Buaya", "DKI5 Kebon Jeruk"])
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["DKI1 Bunderan HI","DKI2 Kelapa Gading", "DKI3 Jagakarsa", "DKI4 Lubang Buaya", "DKI5 Kebon Jeruk", "Data Uji Website"])
     with tab1:
         st.subheader("DKI1 Bunderan HI")
-        Dki1 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI1")
+        Dki1 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI1")
         st.write(Dki1)
     with tab2:
         st.subheader("DKI2 Kelapa Gading")
-        Dki2 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI2")
+        Dki2 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI2")
         st.write(Dki2)
     with tab3:
         st.subheader("DKI3 Jagakarsa")
-        Dki3 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI3")
+        Dki3 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI3")
         st.write(Dki3)
-
     with tab4:
         st.subheader("DKI4 Lubang Buaya")
-        Dki4 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI4")
+        Dki4 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI4")
         st.write(Dki4)
-
     with tab5:
         st.subheader("DKI5 Kebon Jeruk")
-        Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-TA/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI5")
+        Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI5")
+        st.write(Dki5)
+    with tab6:
+        st.subheader("Data Uji Website")
+        Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Preprocessing/test.xlsx")
         st.write(Dki5)
 
     import numpy as np
-    import joblib
+    from numpy.linalg import pinv, inv
+    import time
+    from sklearn.metrics import classification_report, confusion_matrix
+    from sklearn.metrics import ConfusionMatrixDisplay
 
-    def leaky_relu(x, alpha=0.01):
-        return np.where(x >= 0, x, alpha * x)
+    class elm():
+        def __init__(self, hidden_units, activation_function, x, y, C, elm_type, one_hot=True, random_type='normal'):
+            self.hidden_units = hidden_units
+            self.activation_function = activation_function
+            self.random_type = random_type
+            self.x = x
+            self.y = y
+            self.C = C
+            self.class_num = np.unique(self.y).shape[0]
+            self.beta = np.zeros((self.hidden_units, self.class_num))
+            self.elm_type = elm_type
+            self.one_hot = one_hot
 
-    def elm_fit(X, target, h, W=None, lambda_val=1):
-        if W is None:
-            W = np.random.uniform(-.6, .6, (h, len(X[0])))
-        Hinit = X @ W.T
-        H = leaky_relu(Hinit)
-        Ht = H.T
-        
-        # Menambahkan regularisasi ridge
-        I = np.identity(h)
-        Hp = np.linalg.inv(Ht @ H + lambda_val * I) @ Ht
-        
-        beta = Hp @ target
-        y = H @ beta
-        mape = sum(abs(y - target) / target) * 100 / len(target)
-        return W, beta, mape
+            if elm_type == 'clf' and self.one_hot:
+                self.one_hot_label = np.zeros((self.y.shape[0], self.class_num + 1))
+                for i in range(self.y.shape[0]):
+                    self.one_hot_label[i, int(self.y[i])] = 1
 
+            if self.random_type == 'uniform':
+                self.W = np.random.uniform(low=0, high=1, size=(self.hidden_units, self.x.shape[1]))
+                self.b = np.random.uniform(low=0, high=1, size=(self.hidden_units, 1))
+            if self.random_type == 'normal':
+                self.W = np.random.normal(loc=0, scale=0.5, size=(self.hidden_units, self.x.shape[1]))
+                self.b = np.random.normal(loc=0, scale=0.5, size=(self.hidden_units, 1))
 
-    def elm_predict(X, W, b, round_output=False):
-        Hinit = X @ W.T
-        H = leaky_relu(Hinit)
-        y = H @ b
+        def __input2hidden(self, x):
+            #x = np.array(x, dtype=np.float64)  # Mengubah tipe data x menjadi float64
+            self.temH = np.dot(self.W, x.T) + self.b
 
-        if round_output:
-            y = [int(round(x)) for x in y]
+            if self.activation_function == 'sigmoid':
+                self.H = 1 / (1 + np.exp(-self.temH))
 
-        return y
+            if self.activation_function == 'relu':
+                self.H = self.temH * (self.temH > 0)
 
-    def determine_air_quality(PM10, SO2, CO, O3, NO2):
-        model = joblib.load('model_leaky.sav')
-        W_test, b_test = model['W'], model['b']
+            if self.activation_function == 'sin':
+                self.H = np.sin(self.temH)
 
-        X_test = np.array([[PM10, SO2, CO, O3, NO2]])
+            if self.activation_function == 'tanh':
+                self.H = (np.exp(self.temH) - np.exp(-self.temH)) / (np.exp(self.temH) + np.exp(-self.temH))
 
-        air_quality = elm_predict(X_test, W_test, b_test, round_output=True)
+            if self.activation_function == 'leaky_relu':
+                self.H = np.maximum(0, self.temH) + 0.1 * np.minimum(0, self.temH)
 
-        return air_quality[0] 
-        '''
-        if air_quality[0] == 1:
-            return "BAIK"
-        elif air_quality[0] == 2:
-            return "SEDANG"
-        elif air_quality[0] == 3:
-            return "TIDAK SEHAT"
-        elif air_quality[0] == 4:
-            return "SANGAT TIDAK SEHAT"
-        elif air_quality[0] == 5:
-            return "BERBAHAYA"
-        else:
-            return "Tidak dapat menentukan kualitas udara"
-        '''
+            return self.H
+
+        def __hidden2output(self, H):
+            self.output = np.dot(H.T, self.beta)
+            return self.output
+
+        def fit(self, algorithm):
+            self.time1 = time.perf_counter()
+            self.H = self.__input2hidden(self.x)
+            if self.elm_type == 'clf':
+                if self.one_hot:
+                    self.y_temp = self.one_hot_label
+                else:
+                    self.y_temp = self.y
+            if self.elm_type == 'reg':
+                self.y_temp = self.y
+
+            if algorithm == 'no_re':
+                self.beta = np.dot(pinv(self.H.T), self.y_temp)
+
+            if algorithm == 'solution1':
+                self.tmp1 = inv(np.eye(self.H.shape[0]) / self.C + np.dot(self.H, self.H.T))
+                self.tmp2 = np.dot(self.tmp1, self.H)
+                self.beta = np.dot(self.tmp2, self.y_temp)
+
+            if algorithm == 'solution2':
+                self.tmp1 = inv(np.eye(self.H.shape[0]) / self.C + np.dot(self.H, self.H.T))
+                self.tmp2 = np.dot(self.H.T, self.tmp1)
+                self.beta = np.dot(self.tmp2.T, self.y_temp)
+            self.time2 = time.perf_counter()
+
+            self.result = self.__hidden2output(self.H)
+
+            if self.elm_type == 'clf':
+                self.result = np.exp(self.result) / np.sum(np.exp(self.result), axis=1).reshape(-1, 1)
+
+            if self.elm_type == 'clf':
+                self.y_ = np.where(self.result == np.max(self.result, axis=1).reshape(-1, 1))[1]
+                self.correct = 0
+                for i in range(self.y.shape[0]):
+                    if self.y_[i] == self.y[i]:
+                        self.correct += 1
+                self.train_score = self.correct / self.y.shape[0]
+            if self.elm_type == 'reg':
+                self.train_score = np.sqrt(np.sum((self.result - self.y) * (self.result - self.y)) / self.y.shape[0])
+            train_time = str(self.time2 - self.time1)
+            return self.beta, self.train_score, train_time
+
+        def predict(self, x):
+            #x = np.array(x, dtype=np.float64)  # Mengubah tipe data x menjadi float64
+            self.H = self.__input2hidden(x)
+            self.y_ = self.__hidden2output(self.H)
+            if self.elm_type == 'clf':
+                self.y_ = np.where(self.y_ == np.max(self.y_, axis=1).reshape(-1, 1))[1]
+
+            return self.y_
+
+        def predict_proba(self, x):
+            #x = np.array(x, dtype=np.float64)  # Mengubah tipe data x menjadi float64
+            self.H = self.__input2hidden(x)
+            self.y_ = self.__hidden2output(self.H)
+            if self.elm_type == 'clf':
+                self.proba = np.exp(self.y_) / np.sum(np.exp(self.y_), axis=1).reshape(-1, 1)
+            return self.proba
+
+        def score(self, x, y):
+            self.prediction = self.predict(x)
+            if self.elm_type == 'clf':
+                self.correct = 0
+                for i in range(y.shape[0]):
+                    if self.prediction[i] == y[i]:
+                        self.correct += 1
+                self.test_score = self.correct / y.shape[0]
+            if self.elm_type == 'reg':
+                self.test_score = np.sqrt(np.sum((self.result - self.y) * (self.result - self.y)) / self.y.shape[0])
+            return self.test_score
+
+    import pickle
+    import streamlit as st
+    import pandas as pd
+    import numpy as np
+    from sklearn.preprocessing import QuantileTransformer
+    from sklearn.preprocessing import StandardScaler
+
+    # Load the ELM model from the .sav file
+    with open('ELM_M.sav', 'rb') as file:
+        model_data = pickle.load(file)
+
+    kelayakan_model = model_data
+
+    # Function to make predictions using the loaded model
+    def predict_air_quality(data):
+        # Perform the prediction using the Extreme Learning Machine model
+        air_prediction = kelayakan_model.predict(data)
+
+        return air_prediction
 
     def main():
         st.title("Penilaian Kualitas Udara")
         
         # Membaca file Excel
-        excel_file = "D:/Data/Kuliah/TA/Projek-TA/Web/files/K- ELM forecasting/FORECAST KELM.xlsx"
+        excel_file = "D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/K- ELM forecasting/FORECAST KELM.xlsx"
         xls = pd.ExcelFile(excel_file)
         
         # Mendapatkan daftar sheet dalam file Excel
@@ -518,18 +748,50 @@ if visualisasi == "Metode Kernel Extreme Learning Machine":
             # Mendapatkan nilai partikel berdasarkan tanggal yang dipilih
             selected_row = selected_data.iloc[0]  # Mengambil baris pertama
             
-            # Mengisi nilai PM10, SO2, CO, O3, NO2 secara otomatis
-            PM10 = st.number_input("Masukkan nilai PM10", value=int(selected_row["PM10"]))
-            SO2 = st.number_input("Masukkan nilai SO2", value=int(selected_row["SO2"]))
-            CO = st.number_input("Masukkan nilai CO", value=int(selected_row["CO"]))
-            O3 = st.number_input("Masukkan nilai O3", value=int(selected_row["O3"]))
-            NO2 = st.number_input("Masukkan nilai NO2", value=int(selected_row["NO2"]))
-            
-            if st.button("PROSES"):
-                air_quality = determine_air_quality(PM10, SO2, CO, O3, NO2)
-                st.write("Kualitas udara:", air_quality)
-        else:
-            st.write("Data tidak tersedia untuk tanggal yang dipilih")
+        # Mengisi nilai PM10, SO2, CO, O3, NO2 secara otomatis
+        PM10 = st.number_input("Masukkan nilai PM10", value=int(selected_row["PM10"]))
+        SO2 = st.number_input("Masukkan nilai SO2", value=int(selected_row["SO2"]))
+        CO = st.number_input("Masukkan nilai CO", value=int(selected_row["CO"]))
+        O3 = st.number_input("Masukkan nilai O3", value=int(selected_row["O3"]))
+        NO2 = st.number_input("Masukkan nilai NO2", value=int(selected_row["NO2"]))
+
+        if st.button("Proses"):
+            # Periksa apakah ada masukan yang kosong atau tidak valid
+            if any(pd.isnull([PM10, SO2, CO, O3, NO2])):
+                st.error("Harap masukkan nilai numerik yang valid untuk semua input.")
+            else:
+                # Konversi data masukan pengguna menjadi array numpy dan ubah bentuknya
+                input_data = np.array([PM10, SO2, CO, O3, NO2]).reshape(1, -1)
+
+                # Memuat data pelatihan dari file Excel
+                training_data = pd.read_excel('D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Preprocessing/Data setelah smote.xlsx')  
+
+                # Ekstrak fitur-fitur masukan dari data pelatihan dan sesuaikan Standar Scaler
+                X_train = training_data.drop('Kategori', axis=1)
+                scaler = StandardScaler()
+                X_train_scaled = scaler.fit_transform(X_train)
+
+                # Transformasikan data masukan pengguna menggunakan Standar Scaler yang telah di sesuaikan
+                input_data_scaled = scaler.transform(input_data)
+
+                # Lakukan prediksi menggunakan model Extreme Learning Machine
+                air_prediction = predict_air_quality(input_data_scaled)
+                
+                # Hubungkan prediksi numerik dengan label yang sesuai
+                if air_prediction == 1:
+                    air_quality_label = "BAIK"
+                elif air_prediction == 2:
+                    air_quality_label = "SEDANG"
+                elif air_prediction == 3:
+                    air_quality_label = "TIDAK SEHAT"
+                elif air_prediction == 4:
+                    air_quality_label = "SANGAT TIDAK SEHAT"
+                else:
+                    air_quality_label = "Prediksi tidak valid"
+
+                # Tampilkan hasil prediksi atau gunakan untuk proses lebih lanjut
+                st.write("Prediksi Kualitas Udara: ", air_quality_label)
+                st.write("Data Setelah Scaled:", input_data_scaled)
 
     # Menjalankan aplikasi Streamlit
     if __name__ == '__main__':

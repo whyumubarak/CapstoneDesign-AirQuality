@@ -27,21 +27,21 @@ st.write("dibuat oleh:")
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    image = Image.open('D:/Data/Kuliah/TA/Projek-TA/Web/images/Wahyu.jpeg')
+    image = Image.open('D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/images/x.jpg')
     scale_factor = 0.5 
     new_width = int(image.width * scale_factor)
     new_height = int(image.height * scale_factor)
     resized_image = image.resize((new_width, new_height))
     st.image(resized_image, caption='WAHYU MUBARAK SUKIMAN')
 with col2:
-    image = Image.open('D:/Data/Kuliah/TA/Projek-TA/Web/images/agung.jpg')
+    image = Image.open('D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/images/z.jpg')
     scale_factor = 0.5 
     new_width = int(image.width * scale_factor)
     new_height = int(image.height * scale_factor)
     resized_image = image.resize((new_width, new_height))
     st.image(resized_image, caption='AGUNG SULAKSONO RAMDHANI')
 with col3:
-    image = Image.open('D:/Data/Kuliah/TA/Projek-TA/Web/images/obie.jpg')
+    image = Image.open('D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/images/y.jpg')
     scale_factor = 0.5 
     new_width = int(image.width * scale_factor)
     new_height = int(image.height * scale_factor)
