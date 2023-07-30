@@ -19,7 +19,7 @@ if visualisasi == "Dataset ISPU":
     st.title("Visualisasi Dataset ISPU")
     # Load the Excel file
     def load_excel():
-        file_path = "D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Imputer/DATA ISPU - Impute.xlsx"
+        file_path = "DATA/Imputer/DATA ISPU - Impute.xlsx"
         xls = pd.ExcelFile(file_path)
         sheets = xls.sheet_names
         data = {}
@@ -236,27 +236,27 @@ if visualisasi == "Dataset ISPU":
 
         with tab2:
             st.subheader("DKI1 Bunderan HI")
-            Dki1 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI1")
+            Dki1 = pd.read_excel("DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI1")
             st.write(Dki1)
 
         with tab3:
             st.subheader("DKI2 Kelapa Gading")
-            Dki2 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI2")
+            Dki2 = pd.read_excel("DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI2")
             st.write(Dki2)
 
         with tab4:
             st.subheader("DKI3 Jagakarsa")
-            Dki3 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI3")
+            Dki3 = pd.read_excel("DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI3")
             st.write(Dki3)
             
         with tab5:
             st.subheader("DKI4 Lubang Buaya")
-            Dki4 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI4")
+            Dki4 = pd.read_excel("DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI4")
             st.write(Dki4)
 
         with tab6:
             st.subheader("DKI5 Kebon Jeruk")
-            Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI5")
+            Dki5 = pd.read_excel("DATA/Imputer/DATA ISPU - Impute.xlsx", sheet_name="DKI5")
             st.write(Dki5)
 
     # Run the app
@@ -276,27 +276,27 @@ if visualisasi == "Metode Extreme Learning Machine":
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["DKI1 Bunderan HI","DKI2 Kelapa Gading", "DKI3 Jagakarsa", "DKI4 Lubang Buaya", "DKI5 Kebon Jeruk", "Data Uji Website"])
     with tab1:
         st.subheader("DKI1 Bunderan HI")
-        Dki1 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI1")
+        Dki1 = pd.read_excel("Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI1")
         st.write(Dki1)
     with tab2:
         st.subheader("DKI2 Kelapa Gading")
-        Dki2 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI2")
+        Dki2 = pd.read_excel("Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI2")
         st.write(Dki2)
     with tab3:
         st.subheader("DKI3 Jagakarsa")
-        Dki3 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI3")
+        Dki3 = pd.read_excel("Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI3")
         st.write(Dki3)
     with tab4:
         st.subheader("DKI4 Lubang Buaya")
-        Dki4 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI4")
+        Dki4 = pd.read_excel("Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI4")
         st.write(Dki4)
     with tab5:
         st.subheader("DKI5 Kebon Jeruk")
-        Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI5")
+        Dki5 = pd.read_excel("Web/files/ELM forecasting/FORECAST ELM.xlsx", sheet_name="DKI5")
         st.write(Dki5)
     with tab6:
         st.subheader("Data Uji Website")
-        Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Preprocessing/test.xlsx")
+        Dki5 = pd.read_excel("DATA/Preprocessing/balance data testing 20%.xlsx")
         st.write(Dki5)
 
     import numpy as np
@@ -433,7 +433,7 @@ if visualisasi == "Metode Extreme Learning Machine":
     from sklearn.preprocessing import StandardScaler
 
     # Load the ELM model from the .sav file
-    with open('ELM_M.sav', 'rb') as file:
+    with open('Web/ELM_M.sav', 'rb') as file:
         model_data = pickle.load(file)
 
     kelayakan_model = model_data
@@ -449,7 +449,7 @@ if visualisasi == "Metode Extreme Learning Machine":
         st.title("Penilaian Kualitas Udara")
         
         # Membaca file Excel
-        excel_file = "D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/ELM forecasting/FORECAST ELM.xlsx"
+        excel_file = "Web/files/ELM forecasting/FORECAST ELM.xlsx"
         xls = pd.ExcelFile(excel_file)
         
         # Mendapatkan daftar sheet dalam file Excel
@@ -498,7 +498,7 @@ if visualisasi == "Metode Extreme Learning Machine":
                 input_data = np.array([PM10, SO2, CO, O3, NO2]).reshape(1, -1)
 
                 # Memuat data pelatihan dari file Excel
-                training_data = pd.read_excel('D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Preprocessing/Data setelah smote.xlsx')  
+                training_data = pd.read_excel('DATA/Preprocessing/balance data train 80%.xlsx')  
 
                 # Ekstrak fitur-fitur masukan dari data pelatihan dan sesuaikan Standar Scaler
                 X_train = training_data.drop('Kategori', axis=1)
@@ -541,27 +541,27 @@ if visualisasi == "Metode Kernel Extreme Learning Machine":
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["DKI1 Bunderan HI","DKI2 Kelapa Gading", "DKI3 Jagakarsa", "DKI4 Lubang Buaya", "DKI5 Kebon Jeruk", "Data Uji Website"])
     with tab1:
         st.subheader("DKI1 Bunderan HI")
-        Dki1 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI1")
+        Dki1 = pd.read_excel("Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI1")
         st.write(Dki1)
     with tab2:
         st.subheader("DKI2 Kelapa Gading")
-        Dki2 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI2")
+        Dki2 = pd.read_excel("Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI2")
         st.write(Dki2)
     with tab3:
         st.subheader("DKI3 Jagakarsa")
-        Dki3 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI3")
+        Dki3 = pd.read_excel("Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI3")
         st.write(Dki3)
     with tab4:
         st.subheader("DKI4 Lubang Buaya")
-        Dki4 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI4")
+        Dki4 = pd.read_excel("Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI4")
         st.write(Dki4)
     with tab5:
         st.subheader("DKI5 Kebon Jeruk")
-        Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI5")
+        Dki5 = pd.read_excel("Web/files/K- ELM forecasting/FORECAST KELM.xlsx", sheet_name="DKI5")
         st.write(Dki5)
     with tab6:
         st.subheader("Data Uji Website")
-        Dki5 = pd.read_excel("D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Preprocessing/test.xlsx")
+        Dki5 = pd.read_excel("DATA/Preprocessing/balance data testing 20%.xlsx")
         st.write(Dki5)
 
     import numpy as np
@@ -699,7 +699,7 @@ if visualisasi == "Metode Kernel Extreme Learning Machine":
     from sklearn.preprocessing import StandardScaler
 
     # Load the ELM model from the .sav file
-    with open('ELM_M.sav', 'rb') as file:
+    with open('Web/ELM_M.sav', 'rb') as file:
         model_data = pickle.load(file)
 
     kelayakan_model = model_data
@@ -715,7 +715,7 @@ if visualisasi == "Metode Kernel Extreme Learning Machine":
         st.title("Penilaian Kualitas Udara")
         
         # Membaca file Excel
-        excel_file = "D:/Data/Kuliah/TA/Projek-Capstone-Design/Web/files/K- ELM forecasting/FORECAST KELM.xlsx"
+        excel_file = "Web/files/K- ELM forecasting/FORECAST KELM.xlsx"
         xls = pd.ExcelFile(excel_file)
         
         # Mendapatkan daftar sheet dalam file Excel
@@ -764,7 +764,7 @@ if visualisasi == "Metode Kernel Extreme Learning Machine":
                 input_data = np.array([PM10, SO2, CO, O3, NO2]).reshape(1, -1)
 
                 # Memuat data pelatihan dari file Excel
-                training_data = pd.read_excel('D:/Data/Kuliah/TA/Projek-Capstone-Design/DATA/Preprocessing/Data setelah smote.xlsx')  
+                training_data = pd.read_excel('DATA/Preprocessing/balance data train 80%.xlsx')  
 
                 # Ekstrak fitur-fitur masukan dari data pelatihan dan sesuaikan Standar Scaler
                 X_train = training_data.drop('Kategori', axis=1)
