@@ -329,7 +329,6 @@ if visualisasi == "Metode Extreme Learning Machine":
                 self.b = np.random.normal(loc=0, scale=0.5, size=(self.hidden_units, 1))
 
         def __input2hidden(self, x):
-            #x = np.array(x, dtype=np.float64)  # Mengubah tipe data x menjadi float64
             self.temH = np.dot(self.W, x.T) + self.b
 
             if self.activation_function == 'sigmoid':
@@ -396,7 +395,6 @@ if visualisasi == "Metode Extreme Learning Machine":
             return self.beta, self.train_score, train_time
 
         def predict(self, x):
-            #x = np.array(x, dtype=np.float64)  # Mengubah tipe data x menjadi float64
             self.H = self.__input2hidden(x)
             self.y_ = self.__hidden2output(self.H)
             if self.elm_type == 'clf':
@@ -405,7 +403,6 @@ if visualisasi == "Metode Extreme Learning Machine":
             return self.y_
 
         def predict_proba(self, x):
-            #x = np.array(x, dtype=np.float64)  # Mengubah tipe data x menjadi float64
             self.H = self.__input2hidden(x)
             self.y_ = self.__hidden2output(self.H)
             if self.elm_type == 'clf':
@@ -423,7 +420,6 @@ if visualisasi == "Metode Extreme Learning Machine":
             if self.elm_type == 'reg':
                 self.test_score = np.sqrt(np.sum((self.result - self.y) * (self.result - self.y)) / self.y.shape[0])
             return self.test_score
-
     import pickle
     import streamlit as st
     import pandas as pd
@@ -431,7 +427,7 @@ if visualisasi == "Metode Extreme Learning Machine":
     from sklearn.preprocessing import StandardScaler
 
     # Load the ELM model from the .sav file
-    with open('Web/ELM_M.sav', 'rb') as file:
+    with open('Web/MODEL_ELM.sav', 'rb') as file:
         model_data = pickle.load(file)
 
     kelayakan_model = model_data
@@ -592,7 +588,6 @@ if visualisasi == "Metode Kernel Extreme Learning Machine":
                 self.b = np.random.normal(loc=0, scale=0.5, size=(self.hidden_units, 1))
 
         def __input2hidden(self, x):
-            #x = np.array(x, dtype=np.float64)  # Mengubah tipe data x menjadi float64
             self.temH = np.dot(self.W, x.T) + self.b
 
             if self.activation_function == 'sigmoid':
@@ -659,7 +654,6 @@ if visualisasi == "Metode Kernel Extreme Learning Machine":
             return self.beta, self.train_score, train_time
 
         def predict(self, x):
-            #x = np.array(x, dtype=np.float64)  # Mengubah tipe data x menjadi float64
             self.H = self.__input2hidden(x)
             self.y_ = self.__hidden2output(self.H)
             if self.elm_type == 'clf':
@@ -668,7 +662,6 @@ if visualisasi == "Metode Kernel Extreme Learning Machine":
             return self.y_
 
         def predict_proba(self, x):
-            #x = np.array(x, dtype=np.float64)  # Mengubah tipe data x menjadi float64
             self.H = self.__input2hidden(x)
             self.y_ = self.__hidden2output(self.H)
             if self.elm_type == 'clf':
@@ -695,7 +688,7 @@ if visualisasi == "Metode Kernel Extreme Learning Machine":
     from sklearn.preprocessing import StandardScaler
 
     # Load the ELM model from the .sav file
-    with open('Web/ELM_M.sav', 'rb') as file:
+    with open('Web/MODEL_ELM.sav', 'rb') as file:
         model_data = pickle.load(file)
 
     kelayakan_model = model_data
