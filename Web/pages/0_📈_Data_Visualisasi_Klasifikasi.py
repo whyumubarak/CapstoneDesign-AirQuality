@@ -519,7 +519,6 @@ if visualisasi == "Metode Extreme Learning Machine":
 
                 # Tampilkan hasil prediksi atau gunakan untuk proses lebih lanjut
                 st.write("Prediksi Kualitas Udara: ", air_quality_label)
-                st.write("Data Setelah Scaled:", input_data_scaled)
 
     # Menjalankan aplikasi Streamlit
     if __name__ == '__main__':
@@ -780,7 +779,6 @@ if visualisasi == "Metode Kernel Extreme Learning Machine":
 
                 # Tampilkan hasil prediksi atau gunakan untuk proses lebih lanjut
                 st.write("Prediksi Kualitas Udara: ", air_quality_label)
-                st.write("Data Setelah Scaled:", input_data_scaled)
 
     # Menjalankan aplikasi Streamlit
     if __name__ == '__main__':
