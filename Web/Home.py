@@ -35,27 +35,27 @@ with colu1:
     icon4 = folium.Icon(color="green")
     icon5 = folium.Icon(color="orange")
     folium.Marker(
-        [-6.195322117029913, 106.82310195807386], popup="UDARA : TIDAK SEHAT", 
+        [-6.195322117029913, 106.82310195807386],
         tooltip="Bundaran HI",
         icon=icon1
     ).add_to(m)
     folium.Marker(
-        [-6.1528630832227655, 106.89343818072786], popup="UDARA : TIDAK SEHAT", 
+        [-6.1528630832227655, 106.89343818072786],
         tooltip="Kelapa gading",
         icon=icon2
     ).add_to(m)
     folium.Marker(
-        [-6.331951542862599, 106.81439116568198], popup="UDARA : TIDAK SEHAT", 
+        [-6.331951542862599, 106.81439116568198],
         tooltip="Jagakarsa",
         icon=icon3
     ).add_to(m)
     folium.Marker(
-        [-6.291030482700883, 106.89962883811985], popup="UDARA : TIDAK SEHAT", 
+        [-6.291030482700883, 106.89962883811985],
         tooltip="Lubang Buaya",
         icon=icon4
     ).add_to(m)
     folium.Marker(
-        [-6.195942, 106.773595], popup="UDARA : TIDAK SEHAT", 
+        [-6.195942, 106.773595],
         tooltip="Kebon Jeruk",
         icon=icon5
     ).add_to(m)
